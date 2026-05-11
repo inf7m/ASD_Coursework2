@@ -1,210 +1,209 @@
-from models.audiobook import AudioBook
+from models.audio_book import AudioBook
 
 
-class GenerateAudioBooks:
+def generate_audiobooks():
 
-    @staticmethod
-    def generate():
+    audiobooks = [
 
-        return [
+        AudioBook(
+            "Python for Beginners",
+            "Programming",
+            "English",
+            ["John Smith"],
+            "AB1001",
+            "mp3",
+            2020
+        ),
 
-            AudioBook(
-                "AI Future",
-                "Technology",
-                "English",
-                ["David Lee"],
-                2023,
-                "A001",
-                "MP3"
-            ),
+        AudioBook(
+            "Advanced Java",
+            "Programming",
+            "English",
+            ["Michael Tan"],
+            "AB1002",
+            "mp3",
+            2019
+        ),
 
-            AudioBook(
-                "Deep Learning Audio",
-                "Technology",
-                "English",
-                ["Sarah Lim"],
-                2022,
-                "A002",
-                "MP3"
-            ),
+        AudioBook(
+            "Data Structures Essentials",
+            "Computer Science",
+            "English",
+            ["Alice Wong"],
+            "AB1003",
+            "au",
+            2021
+        ),
 
-            AudioBook(
-                "Python Mastery",
-                "Programming",
-                "English",
-                ["John Tan"],
-                2021,
-                "A003",
-                "MP3"
-            ),
+        AudioBook(
+            "Machine Learning Basics",
+            "Artificial Intelligence",
+            "English",
+            ["David Lim"],
+            "AB1004",
+            "mp3",
+            2022
+        ),
 
-            AudioBook(
-                "Startup Success",
-                "Business",
-                "English",
-                ["Ryan Ong"],
-                2020,
-                "A004",
-                "MP3"
-            ),
+        AudioBook(
+            "Cyber Security Guide",
+            "Security",
+            "English",
+            ["Sarah Lee"],
+            "AB1005",
+            "wav",
+            2018
+        ),
 
-            AudioBook(
-                "Cloud Systems",
-                "Technology",
-                "English",
-                ["Emma Goh"],
-                2024,
-                "A005",
-                "MP3"
-            ),
+        AudioBook(
+            "Cloud Computing Concepts",
+            "Technology",
+            "English",
+            ["Daniel Ong"],
+            "AB1006",
+            "mp3",
+            2021
+        ),
 
-            AudioBook(
-                "Data Science Audio",
-                "Technology",
-                "English",
-                ["Kevin Lee"],
-                2023,
-                "A006",
-                "MP3"
-            ),
+        AudioBook(
+            "Networking Fundamentals",
+            "Networking",
+            "English",
+            ["Kevin Ho"],
+            "AB1007",
+            "au",
+            2020
+        ),
 
-            AudioBook(
-                "Machine Learning Guide",
-                "Technology",
-                "English",
-                ["Alex Chua"],
-                2022,
-                "A007",
-                "MP3"
-            ),
+        AudioBook(
+            "Database Management",
+            "Database",
+            "English",
+            ["Emily Tan"],
+            "AB1008",
+            "mp3",
+            2019
+        ),
 
-            AudioBook(
-                "Networking Basics",
-                "Technology",
-                "English",
-                ["Daniel Lim"],
-                2021,
-                "A008",
-                "MP3"
-            ),
+        AudioBook(
+            "Introduction to AI",
+            "Artificial Intelligence",
+            "English",
+            ["Chris Goh"],
+            "AB1009",
+            "wav",
+            2023
+        ),
 
-            AudioBook(
-                "Cyber Security Audio",
-                "Technology",
-                "English",
-                ["Jane Teo"],
-                2020,
-                "A009",
-                "MP3"
-            ),
+        AudioBook(
+            "Operating System Principles",
+            "Computer Science",
+            "English",
+            ["Jason Lim"],
+            "AB1010",
+            "mp3",
+            2017
+        ),
 
-            AudioBook(
-                "Programming Logic",
-                "Programming",
-                "English",
-                ["Ethan Tan"],
-                2024,
-                "A010",
-                "MP3"
-            ),
+        AudioBook(
+            "Web Development Bootcamp",
+            "Web Development",
+            "English",
+            ["Anna Chua"],
+            "AB1011",
+            "au",
+            2022
+        ),
 
-            AudioBook(
-                "Innovation Talks",
-                "Business",
-                "English",
-                ["Mary Lee"],
-                2023,
-                "A011",
-                "MP3"
-            ),
+        AudioBook(
+            "Software Engineering",
+            "Software",
+            "English",
+            ["Peter Ng"],
+            "AB1012",
+            "mp3",
+            2021
+        ),
 
-            AudioBook(
-                "Future AI",
-                "Technology",
-                "English",
-                ["Ryan Chua"],
-                2022,
-                "A012",
-                "MP3"
-            ),
+        AudioBook(
+            "Game Development Basics",
+            "Game Development",
+            "English",
+            ["Marcus Lee"],
+            "AB1013",
+            "wav",
+            2020
+        ),
 
-            AudioBook(
-                "Digital Transformation",
-                "Technology",
-                "English",
-                ["Sarah Ong"],
-                2021,
-                "A013",
-                "MP3"
-            ),
+        AudioBook(
+            "Mobile App Programming",
+            "Mobile Development",
+            "English",
+            ["Sophia Tan"],
+            "AB1014",
+            "mp3",
+            2021
+        ),
 
-            AudioBook(
-                "Algorithms Audio",
-                "Programming",
-                "English",
-                ["David Goh"],
-                2020,
-                "A014",
-                "MP3"
-            ),
+        AudioBook(
+            "Blockchain Essentials",
+            "Technology",
+            "English",
+            ["Ryan Koh"],
+            "AB1015",
+            "au",
+            2022
+        ),
 
-            AudioBook(
-                "Smart Computing",
-                "Technology",
-                "English",
-                ["Kevin Low"],
-                2024,
-                "A015",
-                "MP3"
-            ),
+        AudioBook(
+            "Linux Administration",
+            "Operating Systems",
+            "English",
+            ["Wilson Teo"],
+            "AB1016",
+            "mp3",
+            2019
+        ),
 
-            AudioBook(
-                "Cloud AI",
-                "Technology",
-                "English",
-                ["Alex Tan"],
-                2023,
-                "A016",
-                "MP3"
-            ),
+        AudioBook(
+            "Digital Marketing Basics",
+            "Business",
+            "English",
+            ["Grace Lim"],
+            "AB1017",
+            "wav",
+            2021
+        ),
 
-            AudioBook(
-                "Tech Revolution",
-                "Technology",
-                "English",
-                ["Emma Lim"],
-                2022,
-                "A017",
-                "MP3"
-            ),
+        AudioBook(
+            "Entrepreneurship Guide",
+            "Business",
+            "English",
+            ["Jeremy Wong"],
+            "AB1018",
+            "mp3",
+            2020
+        ),
 
-            AudioBook(
-                "Coding for Beginners",
-                "Programming",
-                "English",
-                ["Jane Ong"],
-                2021,
-                "A018",
-                "MP3"
-            ),
+        AudioBook(
+            "Statistics for Beginners",
+            "Mathematics",
+            "English",
+            ["Rachel Tan"],
+            "AB1019",
+            "au",
+            2018
+        ),
 
-            AudioBook(
-                "Future Programming",
-                "Programming",
-                "English",
-                ["Daniel Chua"],
-                2020,
-                "A019",
-                "MP3"
-            ),
+        AudioBook(
+            "Deep Learning Explained",
+            "Artificial Intelligence",
+            "English",
+            ["Nicholas Goh"],
+            "AB1020",
+            "mp3",
+            2023
+        )
+    ]
 
-            AudioBook(
-                "Software Design",
-                "Programming",
-                "English",
-                ["Mary Tan"],
-                2024,
-                "A020",
-                "MP3"
-            )
-        ]
+    return audiobooks
