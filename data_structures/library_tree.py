@@ -246,3 +246,105 @@ class LibraryTree:
                 year,
                 results
             )
+        # =========================
+    # REMOVE ITEM
+    # =========================
+
+    def remove(self, title):
+
+        self.root = self._remove_recursive(
+            self.root,
+            title.lower()
+        )
+
+    def _remove_recursive(
+            self,
+            current_node,
+            title):
+
+        if current_node is None:
+
+            return None
+
+        current_title = (
+            current_node.item.title.lower()
+        )
+
+        if title < current_title:
+
+            current_node.left = (
+                self._remove_recursive(
+                    current_node.left,
+                    title
+                )
+            )
+
+        elif title > current_title:
+
+            current_node.right = (
+                self._remove_recursive(
+                    current_node.right,
+                    title
+                )
+            )
+
+        else:
+
+            # CASE 1:
+            # NO CHILDREN
+
+            if (
+                    current_node.left is None
+                    and
+                    current_node.right is None
+            ):
+
+                return None
+
+            # CASE 2:
+            # ONE CHILD
+
+            if current_node.left is None:
+
+                return current_node.right
+
+            if current_node.right is None:
+
+                return current_node.left
+
+            # CASE 3:
+            # TWO CHILDREN
+
+            successor = self._find_min(
+                current_node.right
+            )
+
+            current_node.item = successor.item
+
+            current_node.right = (
+                self._remove_recursive(
+                    current_node.right,
+                    successor.item.title.lower()
+                )
+            )
+
+        return current_node
+
+    # =========================
+    # FIND MINIMUM NODE
+    # =========================
+
+    def _find_min(
+            self,
+            current_node):
+
+        while (
+                current_node.left
+                is not None
+        ):
+
+            current_node = (
+                current_node.left
+            )
+
+        return current_node
