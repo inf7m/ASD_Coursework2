@@ -1,4 +1,6 @@
-from models.library_item import LibraryItem
+from models.library_item import (
+    LibraryItem
+)
 
 
 class AudioBook(LibraryItem):
@@ -9,9 +11,9 @@ class AudioBook(LibraryItem):
             category,
             language,
             authors,
-            year_published,
-            audio_id,
-            audio_format):
+            isbn,
+            audio_format,
+            year_published):
 
         super().__init__(
             title,
@@ -21,19 +23,25 @@ class AudioBook(LibraryItem):
             year_published
         )
 
-        self.audio_id = audio_id
+        self.isbn = isbn
 
-        self.audio_format = audio_format
+        # =========================
+        # AUDIO FORMAT
+        # Example:
+        # mp3, au, wav
+        # =========================
 
-    # =========================
-    # STRING DISPLAY
-    # =========================
+        self.audio_format = (
+            audio_format
+        )
 
     def __str__(self):
 
         return (
-            f"[AUDIO BOOK] "
-            f"{super().__str__()} | "
-            f"Audio ID: {self.audio_id} | "
-            f"Format: {self.audio_format}"
+            super().__str__()
+            +
+            f"\nISBN: {self.isbn}"
+            +
+            f"\nAudio Format: "
+            f"{self.audio_format}"
         )
