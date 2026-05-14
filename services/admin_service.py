@@ -1,7 +1,7 @@
 from models.book import Book
 from models.periodical import Periodical
 from models.magazine import Magazine
-from models.audio_book import AudioBook
+from models.audiobook import AudioBook
 
 
 class AdminService:
